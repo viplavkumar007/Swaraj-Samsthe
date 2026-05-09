@@ -75,7 +75,7 @@ export default function About() {
             <div className="relative">
               <div className="w-64 h-72 rounded-3xl overflow-hidden border-4 border-gold-300 shadow-gold-xl"
                 style={{ boxShadow: '0 8px 40px rgba(201,168,76,0.35)' }}>
-                <img src={presidentImg} alt="President & CEO" className="w-full h-full object-cover" loading="eager" />
+                <img src={presidentImg} alt="Founder Rajendra K K" className="w-full h-full object-cover" loading="eager" />
               </div>
               {/* Gold corner accents */}
               <div className="absolute -top-3 -left-3 w-8 h-8 border-t-4 border-l-4 border-gold-400 rounded-tl-lg" />

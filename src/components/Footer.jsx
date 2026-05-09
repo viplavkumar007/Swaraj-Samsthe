@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Heart } from 'lucide-react'
+import { Phone, Mail, MapPin, Heart, Facebook, Instagram } from 'lucide-react'
 import { brand, contact, navLinks, bank } from '../data/siteContent'
 import logo from '../assets/logo.png'
 
@@ -20,8 +20,8 @@ export default function Footer() {
           {/* Brand col */}
           <div className="lg:col-span-1 flex flex-col gap-5">
             <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-2xl overflow-hidden bg-charcoal-800 border-2 border-gold-700 flex items-center justify-center">
-                <img src={logo} alt="Swaraj Samsthe" className="w-12 h-12 object-contain" />
+              <div className="w-14 h-14 rounded-2xl overflow-hidden bg-charcoal-800 border-2 border-gold-700 flex items-center justify-center p-1.5">
+                <img src={logo} alt="Swaraj Samsthe" className="w-full h-full object-contain" />
               </div>
               <div>
                 <p className="font-display font-700 text-white text-lg leading-none" style={{fontWeight:700}}>Swaraj Samsthe</p>
@@ -44,6 +44,26 @@ export default function Footer() {
                 <Mail size={13} />
                 <a href={`mailto:${contact.email}`} className="font-sans text-sm hover:text-gold-300 transition-colors" style={{color:'#ccc'}}>{contact.email}</a>
               </span>
+            </div>
+            <div className="flex items-center gap-3 pt-1">
+              <a
+                href={contact.social.facebook}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit our Facebook page"
+                className="w-10 h-10 rounded-full border border-gold-700 bg-charcoal-800 text-gold-400 flex items-center justify-center hover:bg-gold-500 hover:text-charcoal-900 transition-colors"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href={contact.social.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit our Instagram page"
+                className="w-10 h-10 rounded-full border border-gold-700 bg-charcoal-800 text-gold-400 flex items-center justify-center hover:bg-gold-500 hover:text-charcoal-900 transition-colors"
+              >
+                <Instagram size={18} />
+              </a>
             </div>
           </div>
 

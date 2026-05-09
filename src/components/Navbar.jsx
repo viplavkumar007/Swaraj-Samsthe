@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
-import { navLinks, contact } from '../data/siteContent'
+import { navLinks, contact, brand } from '../data/siteContent'
 import logo from '../assets/logo.png'
 
 export default function Navbar() {
@@ -49,11 +49,11 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
           {/* Logo */}
           <button onClick={() => handleNav('#home')} className="flex items-center gap-4 focus:outline-none group">
-            <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-gold-300 shadow-gold flex items-center justify-center bg-charcoal-900 transition-transform duration-300 group-hover:scale-105">
-              <img src={logo} alt="Swaraj Samsthe Logo" className="w-full h-full object-cover" />
+            <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-gold-300 shadow-gold flex items-center justify-center bg-charcoal-900 transition-transform duration-300 group-hover:scale-105 p-1.5">
+              <img src={logo} alt="Swaraj Samsthe Logo" className="w-full h-full object-contain" />
             </div>
-            <div className="hidden sm:block">
-              <p className="font-display font-700 text-xl leading-none text-charcoal-900" style={{fontWeight:700}}>Swaraj Samsthe</p>
+            <div className="hidden sm:block max-w-[24rem]">
+              <p className="font-display font-700 text-sm md:text-base leading-tight text-charcoal-900" style={{fontWeight:700}}>{brand.fullName}</p>
               <p className="font-sans text-[11px] text-gold-600 tracking-widest uppercase mt-1">Empowering & Sustainability</p>
             </div>
           </button>

@@ -2,8 +2,8 @@
 // Central content config — all page content lives here
 
 export const brand = {
-  name: "Swaraj Samsthe",
-  fullName: "Swaraj Saamajika Abhivruddhi Samsthe (R.)",
+  name: "SWARAJ SAAMAJIKA ABHIVRUDDHI SAMSTHE. ( R)",
+  fullName: "SWARAJ SAAMAJIKA ABHIVRUDDHI SAMSTHE. ( R)",
   tagline: "Empowering & Sustainability",
   established: "2016",
   location: "Chikkamagaluru, Karnataka",
@@ -14,6 +14,10 @@ export const contact = {
   phones: ["9019868464", "7259444124"],
   email: "swarajsamsthe2018@gmail.com",
   whatsapp: "919019868464",
+  social: {
+    facebook: "https://www.facebook.com/profile.php?id=61574236911780",
+    instagram: "https://www.instagram.com/swarajsamstheckm/",
+  },
   address: {
     line1: "Room No. 14, C/O M C Investment",
     line2: "Mathaias Tower, IG Road",
@@ -38,7 +42,7 @@ export const hero = {
   headline: "Empowering Communities,",
   headlineAccent: "Sustaining Futures",
   subtext:
-    "Swaraj Samsthe is a grassroots NGO working since 2016 to uplift rural families through farm support, livelihood programs, and social development activities across Chikkamagaluru district.",
+    "SWARAJ SAAMAJIKA ABHIVRUDDHI SAMSTHE. ( R) is a grassroots NGO working since 2016 to uplift rural families through farm support, livelihood programs, and social development activities across Chikkamagaluru district.",
   cta1: "Get Involved",
   cta2: "Contact Us",
   stats: [
@@ -64,7 +68,7 @@ export const services = [
       "Govt Scheme Linkage",
       "Farmer Self-Help Groups",
     ],
-    image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80",
+    image: "https://cdn.pixabay.com/photo/2022/05/20/04/47/sheep-7208592_1280.jpg",
     color: "from-green-50 to-emerald-50",
     accent: "#22c55e",
   },
@@ -122,8 +126,8 @@ export const about = {
     { icon: "⚡", title: "Impact-Driven", desc: "Measurable outcomes in every program" },
   ],
   president: {
-    name: "President & CEO",
-    org: "Swaraj Samsthe (R.)",
+    name: "RAJENDRA K K",
+    org: "Founder",
     quote:
       "Our mission is simple — leave no rural family behind. We believe that with the right support, every community has the power to transform itself.",
   },
@@ -132,11 +136,11 @@ export const about = {
 export const testimonials = [
   {
     id: 1,
-    name: "Rekha Gowda",
-    role: "Farmer, Aldur Village",
-    text: "Swaraj Samsthe helped me transition to organic farming. My income has increased by 40% and my soil is healthier than ever. I am grateful for their constant support and guidance.",
+    name: "Smt. Manjula",
+    role: "Farmer, Togarihankal Village, Chikmagalur",
+    text: "With the support and encouragement of Swaraj Samsthe, I have grown my poultry work into a steady livelihood. This opportunity has strengthened my family's income and given me confidence to keep building for the future.",
     rating: 5,
-    initial: "R",
+    initial: "M",
   },
   {
     id: 2,
@@ -163,6 +167,22 @@ export const testimonials = [
     initial: "M",
   },
 ]
+
+export const featuredBeneficiary = {
+  name: "Smt. Manjula",
+  role: "Farmer, Togarihankal Village, Chikmagalur",
+  badge: "Featured Poultry Entrepreneur",
+  title: "Poultry Work Creating Sustainable Income",
+  story:
+    "Smt. Manjula is building a strong poultry-based livelihood in Togarihankal Village, Chikmagalur. Her work shows how small-scale poultry farming can become a practical and sustainable path toward self-reliance, confidence, and stable family income.",
+  highlights: [
+    "Poultry-based livelihood development",
+    "Women-led rural enterprise",
+    "Better income support for the family",
+  ],
+  primaryImage: "/src/assets/manjula-poultry-1.jpeg",
+  secondaryImage: "/src/assets/manjula-poultry-2.jpeg",
+}
 
 export const faqs = [
   {
