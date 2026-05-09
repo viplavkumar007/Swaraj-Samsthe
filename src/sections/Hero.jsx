@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Phone, MessageCircle, ChevronDown, Sparkles } from 'lucide-react'
+import { Phone, MessageCircle, ChevronDown, Sparkles, Facebook, Instagram } from 'lucide-react'
 import { hero, contact, brand } from '../data/siteContent'
 import logo from '../assets/logo.png'
 
@@ -93,6 +93,30 @@ export default function Hero() {
               </a>
             </motion.div>
 
+            <motion.div variants={stagger.item} className="flex items-center gap-4 pt-1 flex-wrap">
+              <span className="font-sans text-xs uppercase tracking-[0.24em] text-charcoal-600">Follow Us</span>
+              <div className="flex items-center gap-3">
+                <a
+                  href={contact.social.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit our Facebook page"
+                  className="w-11 h-11 rounded-full border border-gold-300 bg-white/80 text-gold-600 flex items-center justify-center shadow-gold hover:bg-gold-500 hover:text-charcoal-900 transition-colors"
+                >
+                  <Facebook size={18} />
+                </a>
+                <a
+                  href={contact.social.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit our Instagram page"
+                  className="w-11 h-11 rounded-full border border-gold-300 bg-white/80 text-gold-600 flex items-center justify-center shadow-gold hover:bg-gold-500 hover:text-charcoal-900 transition-colors"
+                >
+                  <Instagram size={18} />
+                </a>
+              </div>
+            </motion.div>
+
             {/* Stats row */}
             <motion.div variants={stagger.item} className="grid grid-cols-4 gap-4 pt-4">
               {hero.stats.map((stat) => (
@@ -140,7 +164,7 @@ export default function Hero() {
                 "Empowering Communities, Sustaining Futures"
               </p>
               <div className="gold-divider mt-3 mx-auto w-24" />
-              <p className="font-sans text-xs text-charcoal-600 mt-3 tracking-widest uppercase">
+              <p className="font-sans text-[10px] md:text-[11px] text-charcoal-600 mt-3 tracking-[0.18em] uppercase whitespace-nowrap">
                 {brand.fullName}
               </p>
             </div>
