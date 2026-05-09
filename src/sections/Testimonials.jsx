@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { Star, Quote, Egg, ArrowRight } from 'lucide-react'
 import { testimonials, featuredBeneficiary } from '../data/siteContent'
+import manjulaPrimaryImage from '../assets/manjula-poultry-1.jpeg'
+import manjulaSecondaryImage from '../assets/manjula-poultry-2.jpeg'
 
 function TestiCard({ t, index }) {
   return (
@@ -91,14 +93,14 @@ export default function Testimonials() {
           <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
             <div className="relative min-h-[26rem] bg-charcoal-950">
               <img
-                src={featuredBeneficiary.primaryImage}
+                src={manjulaPrimaryImage}
                 alt={`${featuredBeneficiary.name} poultry work`}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950/80 via-charcoal-950/25 to-transparent" />
               <div className="absolute bottom-4 right-4 w-56 h-56 rounded-[1.5rem] overflow-hidden border-4 border-white/80 shadow-2xl hidden sm:block">
                 <img
-                  src={featuredBeneficiary.secondaryImage}
+                  src={manjulaSecondaryImage}
                   alt={`${featuredBeneficiary.name} at poultry unit`}
                   className="w-full h-full object-cover"
                 />

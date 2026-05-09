@@ -180,8 +180,6 @@ export const featuredBeneficiary = {
     "Women-led rural enterprise",
     "Better income support for the family",
   ],
-  primaryImage: "/src/assets/manjula-poultry-1.jpeg",
-  secondaryImage: "/src/assets/manjula-poultry-2.jpeg",
 }
 
 export const faqs = [
