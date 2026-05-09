@@ -22,7 +22,7 @@
 @layer components {
   /* Gold Glossy Button */
   .btn-gold {
-    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-sans font-600 text-charcoal-900 text-sm tracking-wide overflow-hidden transition-all duration-300;
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-sans font-semibold text-charcoal-900 text-sm tracking-wide overflow-hidden transition-all duration-300;
     background: linear-gradient(135deg, #F0C040 0%, #D4AF37 40%, #C9A84C 70%, #B8860B 100%);
     box-shadow: 0 4px 15px rgba(201,168,76,0.45), inset 0 1px 0 rgba(255,255,255,0.4);
     font-weight: 600;
@@ -42,7 +42,7 @@
 
   /* Outline Gold Button */
   .btn-outline-gold {
-    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-sans font-600 text-gold-600 text-sm tracking-wide border-2 border-gold-400 bg-transparent overflow-hidden transition-all duration-300;
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-sans font-semibold text-gold-600 text-sm tracking-wide border-2 border-gold-400 bg-transparent overflow-hidden transition-all duration-300;
     font-weight: 600;
   }
   .btn-outline-gold::before {
@@ -73,7 +73,7 @@
 
   /* Section heading gold underline */
   .section-title {
-    @apply font-display text-3xl md:text-4xl lg:text-5xl font-700 text-charcoal-900 leading-tight;
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal-900 leading-tight;
   }
   .gold-underline {
     @apply relative inline-block;
@@ -97,7 +97,7 @@
 
   /* Gold badge */
   .badge-gold {
-    @apply inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-sans font-600 text-gold-700 border border-gold-300;
+    @apply inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-sans font-semibold text-gold-700 border border-gold-300;
     background: linear-gradient(135deg, #FEF3C7, #FDE68A);
     font-weight: 600;
   }

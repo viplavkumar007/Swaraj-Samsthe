@@ -46,15 +46,15 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
           {/* Logo */}
-          <button onClick={() => handleNav('#home')} className="flex items-center gap-3 focus:outline-none group">
-            <div className="w-12 h-12 rounded-2xl overflow-hidden border-2 border-gold-300 shadow-gold flex items-center justify-center bg-charcoal-900 transition-transform duration-300 group-hover:scale-105">
-              <img src={logo} alt="Swaraj Samsthe Logo" className="w-10 h-10 object-contain" />
+          <button onClick={() => handleNav('#home')} className="flex items-center gap-4 focus:outline-none group">
+            <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-gold-300 shadow-gold flex items-center justify-center bg-charcoal-900 transition-transform duration-300 group-hover:scale-105">
+              <img src={logo} alt="Swaraj Samsthe Logo" className="w-full h-full object-cover" />
             </div>
             <div className="hidden sm:block">
-              <p className="font-display font-700 text-lg leading-none text-charcoal-900" style={{fontWeight:700}}>Swaraj Samsthe</p>
-              <p className="font-sans text-xs text-gold-600 tracking-widest uppercase mt-0.5">Empowering & Sustainability</p>
+              <p className="font-display font-700 text-xl leading-none text-charcoal-900" style={{fontWeight:700}}>Swaraj Samsthe</p>
+              <p className="font-sans text-[11px] text-gold-600 tracking-widest uppercase mt-1">Empowering & Sustainability</p>
             </div>
           </button>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed top-20 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gold-200 shadow-gold-lg lg:hidden"
+            className="fixed top-24 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gold-200 shadow-gold-lg lg:hidden"
           >
             <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-1">
               {navLinks.map((link) => (

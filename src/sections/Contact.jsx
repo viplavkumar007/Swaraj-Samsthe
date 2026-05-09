@@ -55,10 +55,32 @@ export default function Contact() {
     if (Object.keys(errs).length) return
 
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 1800))
+    const enquiryLines = [
+      'Hello Swaraj Samsthe,',
+      '',
+      'I would like to make an enquiry.',
+      '',
+      `Name: ${form.name.trim()}`,
+      `Phone: ${form.phone.trim()}`,
+      `Email: ${form.email.trim() || 'Not provided'}`,
+      `Area of Interest: ${form.interest || 'General Enquiry'}`,
+      '',
+      'Message:',
+      form.message.trim(),
+    ]
+
+    const enquiryMessage = enquiryLines.join('\n')
+    const whatsappUrl = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(enquiryMessage)}`
+    const emailSubject = encodeURIComponent(`Enquiry from ${form.name.trim()}`)
+    const emailBody = encodeURIComponent(enquiryMessage)
+    const mailtoUrl = `mailto:${contact.email}?subject=${emailSubject}&body=${emailBody}`
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+    window.location.href = mailtoUrl
+
     setLoading(false)
     setForm({ name: '', email: '', phone: '', message: '', interest: '' })
-    setToast({ type: 'success', message: 'Thank you! We will contact you within 24 hours.' })
+    setToast({ type: 'success', message: 'WhatsApp and email have been opened with your prefilled enquiry.' })
     setTimeout(() => setToast(null), 4500)
   }
 
@@ -231,10 +253,10 @@ export default function Contact() {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                         </svg>
-                        Sending...
+                        Opening...
                       </>
                     ) : (
-                      <><Send size={15} />Send Message</>
+                      <><Send size={15} />Send via WhatsApp & Email</>
                     )}
                   </span>
                 </button>

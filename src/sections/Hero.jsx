@@ -117,9 +117,11 @@ export default function Hero() {
           >
             {/* Logo showcase */}
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-charcoal-900 flex items-center justify-center shadow-gold-xl float-anim border-4 border-gold-400"
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-charcoal-900 flex items-center justify-center shadow-gold-xl float-anim border-4 border-gold-400"
                 style={{ boxShadow: '0 0 0 12px rgba(201,168,76,0.15), 0 20px 60px rgba(201,168,76,0.4)' }}>
-                <img src={logo} alt="Swaraj Samsthe" className="w-52 h-52 md:w-64 md:h-64 object-contain drop-shadow-2xl" />
+                <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden flex items-center justify-center bg-charcoal-900/80">
+                  <img src={logo} alt="Swaraj Samsthe" className="w-full h-full rounded-full object-cover drop-shadow-2xl" />
+                </div>
               </div>
               {/* Orbiting badge */}
               <motion.div
