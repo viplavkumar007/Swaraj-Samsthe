@@ -11,29 +11,31 @@ function TestiCard({ t, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, delay: index * 0.12 }}
-      className="card-gold p-7 flex flex-col gap-4 h-full"
+      className="card-gold p-7 flex flex-col md:flex-row md:items-center gap-5 h-full"
     >
-      <div className="flex gap-1">
-        {Array.from({ length: t.rating }).map((_, i) => (
-          <Star key={i} size={14} className="fill-gold-400 text-gold-400" />
-        ))}
-      </div>
-
-      <Quote size={24} className="text-gold-300" />
-
-      <p className="font-body text-charcoal-700 text-sm leading-relaxed flex-1 italic">"{t.text}"</p>
-
-      <div className="flex items-center gap-3 pt-2 border-t border-gold-100">
+      <div className="md:w-60 md:flex-shrink-0 flex items-center gap-3 md:pr-6 md:border-r md:border-gold-100">
         <div
-          className="w-10 h-10 rounded-full flex items-center justify-center font-display font-700 text-white text-sm flex-shrink-0"
+          className="w-12 h-12 rounded-full flex items-center justify-center font-display font-700 text-white text-base flex-shrink-0"
           style={{ background: 'linear-gradient(135deg,#D4AF37,#B8860B)', fontWeight: 700 }}
         >
           {t.initial}
         </div>
         <div>
-          <p className="font-sans font-600 text-charcoal-900 text-sm" style={{ fontWeight: 600 }}>{t.name}</p>
-          <p className="font-sans text-xs text-gold-600">{t.role}</p>
+          <p className="font-sans font-600 text-charcoal-900 text-base" style={{ fontWeight: 600 }}>{t.name}</p>
+          <p className="font-sans text-sm text-gold-600">{t.role}</p>
         </div>
+      </div>
+
+      <div className="flex-1 flex flex-col gap-3">
+        <div className="flex items-center gap-3">
+          <div className="flex gap-1">
+            {Array.from({ length: t.rating }).map((_, i) => (
+              <Star key={i} size={14} className="fill-gold-400 text-gold-400" />
+            ))}
+          </div>
+          <Quote size={22} className="text-gold-300" />
+        </div>
+        <p className="font-body text-charcoal-700 text-sm md:text-base leading-relaxed italic">"{t.text}"</p>
       </div>
     </motion.div>
   )
@@ -144,7 +146,7 @@ export default function Testimonials() {
           </div>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-4xl mx-auto">
           {testimonials.map((t, i) => <TestiCard key={t.id} t={t} index={i} />)}
         </div>
       </div>

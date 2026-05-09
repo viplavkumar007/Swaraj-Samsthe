@@ -142,30 +142,6 @@ export const testimonials = [
     rating: 5,
     initial: "M",
   },
-  {
-    id: 2,
-    name: "Suresh Kumar",
-    role: "Beneficiary, Skill Program",
-    text: "I attended their vocational training program and got placed in a local company within 2 months. This organization truly changed my life and gave me a future I could not have imagined.",
-    rating: 5,
-    initial: "S",
-  },
-  {
-    id: 3,
-    name: "Lakshmi Devi",
-    role: "SHG Member, Chikkamagaluru",
-    text: "Through the women self-help group formed by Swaraj Samsthe, I started my own small business. Now I support my family independently. Their work empowers us every day.",
-    rating: 5,
-    initial: "L",
-  },
-  {
-    id: 4,
-    name: "Mohan Rao",
-    role: "Village Panchayat Member",
-    text: "Their health camps and sanitation drives have genuinely improved our village's wellbeing. Swaraj Samsthe works with dedication and professionalism. We are proud to partner with them.",
-    rating: 5,
-    initial: "M",
-  },
 ]
 
 export const featuredBeneficiary = {
