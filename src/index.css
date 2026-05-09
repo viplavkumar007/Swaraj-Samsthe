@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream-50 text-charcoal-900 font-sans;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Gold Glossy Button */
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-sans font-600 text-charcoal-900 text-sm tracking-wide overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, #F0C040 0%, #D4AF37 40%, #C9A84C 70%, #B8860B 100%);
+    box-shadow: 0 4px 15px rgba(201,168,76,0.45), inset 0 1px 0 rgba(255,255,255,0.4);
+    font-weight: 600;
+  }
+  .btn-gold::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, #FDE68A 0%, #F0C040 50%, #C9A84C 100%);
+  }
+  .btn-gold:hover::before { @apply opacity-100; }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(201,168,76,0.55), inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+  .btn-gold:active { transform: translateY(0px); }
+  .btn-gold span { @apply relative z-10; }
+
+  /* Outline Gold Button */
+  .btn-outline-gold {
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-sans font-600 text-gold-600 text-sm tracking-wide border-2 border-gold-400 bg-transparent overflow-hidden transition-all duration-300;
+    font-weight: 600;
+  }
+  .btn-outline-gold::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  }
+  .btn-outline-gold:hover::before { @apply opacity-100; }
+  .btn-outline-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201,168,76,0.3);
+    @apply border-gold-500 text-gold-700;
+  }
+  .btn-outline-gold span { @apply relative z-10; }
+
+  /* WhatsApp Button */
+  .btn-whatsapp {
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-sans text-sm tracking-wide text-white overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 4px 15px rgba(37,211,102,0.4), inset 0 1px 0 rgba(255,255,255,0.25);
+    font-weight: 600;
+  }
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37,211,102,0.5);
+  }
+  .btn-whatsapp:active { transform: translateY(0px); }
+
+  /* Section heading gold underline */
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-700 text-charcoal-900 leading-tight;
+  }
+  .gold-underline {
+    @apply relative inline-block;
+  }
+  .gold-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 rounded-full;
+    background: linear-gradient(90deg, #F0C040, #B8860B);
+  }
+
+  /* Card */
+  .card-gold {
+    @apply bg-white rounded-3xl border border-gold-100 transition-all duration-300 overflow-hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  }
+  .card-gold:hover {
+    transform: translateY(-6px) rotate(0.3deg);
+    box-shadow: 0 16px 48px rgba(201,168,76,0.2), 0 6px 20px rgba(0,0,0,0.08);
+    @apply border-gold-300;
+  }
+
+  /* Gold badge */
+  .badge-gold {
+    @apply inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-sans font-600 text-gold-700 border border-gold-300;
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    font-weight: 600;
+  }
+
+  /* Section padding */
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  /* Glass card */
+  .glass-card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    @apply rounded-3xl border border-white/60;
+    box-shadow: 0 8px 32px rgba(201,168,76,0.12);
+  }
+
+  /* Input styles */
+  .input-gold {
+    @apply w-full px-4 py-3.5 rounded-xl border-2 border-gold-200 bg-white text-charcoal-900 font-sans text-sm transition-all duration-200 outline-none;
+  }
+  .input-gold:focus {
+    @apply border-gold-400;
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+  }
+  .input-gold::placeholder { @apply text-charcoal-600/50; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-cream-100; }
+  ::-webkit-scrollbar-thumb { @apply bg-gold-400 rounded-full; }
+}
+
+/* Shimmer animation for buttons */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Floating animation */
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-anim { animation: floatAnim 4s ease-in-out infinite; }
+
+/* Decorative gold divider */
+.gold-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4AF37, #F0C040, #D4AF37, transparent);
+  border-radius: 999px;
+}
+
+/* Preloaded — no scroll animations, all visible by default */
+.reveal { opacity: 1 !important; transform: none !important; }
